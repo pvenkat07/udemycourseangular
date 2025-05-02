@@ -1,6 +1,7 @@
 <app-header />
 <main>
   <ul id="users">
+    <button> Add New User</button>
     @for (user of users; track user.id) {
     <li>
       <app-user [user]="user" [selected]="user.id === selectedUserId" (select)="onSelectUser($event)" />
