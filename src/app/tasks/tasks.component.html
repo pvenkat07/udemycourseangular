@@ -10,6 +10,9 @@
     </header>
 
     <ul>
+        @if (selectedUserTasks.length < 1) {
+            <p> No tasks found!</p>
+        }
         @for (task of selectedUserTasks; track task.id) {
         <li>
             <app-task [task]="task" (complete)="onCompleteTask($event)"/>
